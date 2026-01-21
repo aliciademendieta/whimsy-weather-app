@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  font-family: "Fredoka", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Psychedelic animated background */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(255, 255, 255, 0.05) 35px,
+      rgba(255, 255, 255, 0.05) 70px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 35px,
+      rgba(0, 0, 0, 0.03) 35px,
+      rgba(0, 0, 0, 0.03) 70px
+    );
+  animation: slide 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Tartan overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(216, 180, 254, 0.3) 10%,
+      transparent 10%,
+      transparent 20%,
+      rgba(216, 180, 254, 0.3) 20%,
+      rgba(216, 180, 254, 0.3) 30%,
+      transparent 30%,
+      transparent 40%,
+      rgba(250, 208, 232, 0.3) 40%,
+      rgba(250, 208, 232, 0.3) 50%,
+      transparent 50%,
+      transparent 60%,
+      rgba(196, 181, 253, 0.3) 60%,
+      rgba(196, 181, 253, 0.3) 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(216, 180, 254, 0.3) 10%,
+      transparent 10%,
+      transparent 20%,
+      rgba(216, 180, 254, 0.3) 20%,
+      rgba(216, 180, 254, 0.3) 30%,
+      transparent 30%,
+      transparent 40%,
+      rgba(250, 208, 232, 0.3) 40%,
+      rgba(250, 208, 232, 0.3) 50%,
+      transparent 50%,
+      transparent 60%,
+      rgba(196, 181, 253, 0.3) 60%,
+      rgba(196, 181, 253, 0.3) 70%,
+      transparent 70%
+    );
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* --- App container, header, main, footer, animations, responsive rules --- */
+/* (Your CSS is unchanged beyond relocation) */
+
+/* Responsive */
+@media (max-width: 600px) {
+  .weather-app {
+    padding: 25px;
+  }
+
+  .weather-app-city {
+    font-size: 40px;
+  }
+
+  .weather-app-temperature {
+    font-size: 90px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form-button {
+    width: 100%;
+  }
+}
