@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Whimsical Weather ☀️</title>
+  </head>
+
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a magical city..."
+            required
+            class="search-form-input"
+            id="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <strong id="time"></strong>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+
+          <div class="weather-app-temperature-container">
+            <div id="icon" class="weather-app-icon">🌡️</div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        Built with ✨ by
+        <a href="https://github.com/aliciademendieta" target="_blank">Alice</a>
+        • hosted on
+        <a href="https://github.com/aliciademendieta/Meteo" target="_blank">
+          GitHub
+        </a>
+        • live on
+        <a href="https://meteobyalice.netlify.app/" target="_blank">
+          Netlify
+        </a>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+  </body>
+</html>
